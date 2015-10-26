@@ -43,7 +43,7 @@ public class ToastUtil {
         return currentToast;
     }
 
-    public static void showToast(Context context, String msg, int duration) {
+    public static void showToast(Context context, CharSequence  msg, int duration) {
         if (currentToast == null && context != null) {
             currentToast = makeText(context, msg, duration);
         } else {
@@ -53,7 +53,7 @@ public class ToastUtil {
         ToastHandler.sendEmptyMessage(0);
     }
 
-    public static void showToast(Context context, String msg) {
+    public static void showToast(Context context, CharSequence  msg) {
         try {
             if (context != null) {
                 showToast(context, msg, 1000);
