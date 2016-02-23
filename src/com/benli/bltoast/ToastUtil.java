@@ -44,13 +44,25 @@ public class ToastUtil {
     }
 
     public static void showToast(Context context, CharSequence  msg, int duration) {
+        showToast(context, msg, duration, 0);
+    }
+    
+    /**
+     * 发送延时Toast
+     * @param context
+     * @param msg
+     * @param duration
+     * @param delay
+     */
+    public static void showToast(Context context, CharSequence  msg, int duration, long delay) {
         if (currentToast == null && context != null) {
             currentToast = makeText(context, msg, duration);
         } else {
             currentToast.setText(msg);
         }
         currentToast.setGravity(Gravity.CENTER, 0, 0);
-        ToastHandler.sendEmptyMessage(0);
+        delay %= 1000;
+        ToastHandler.sendEmptyMessageDelayed(0, delay);
     }
 
     public static void showToast(Context context, CharSequence  msg) {
