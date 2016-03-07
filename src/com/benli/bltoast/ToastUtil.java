@@ -1,9 +1,5 @@
 /**      
  * ToastUtil.java Create on 2013-6-29     
- *      
- * Copyright (c) 2013 by GreenShore Network
- * Company: 上海绿岸网络科技有限公司(Shanghai GreenShore Network Technology Co.,Ltd.)
-
  */
 
 package com.benli.bltoast;
